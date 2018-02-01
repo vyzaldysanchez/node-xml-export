@@ -1,6 +1,5 @@
 const express = require('express');
 const xml = require('js2xmlparser');
-const fs = require('fs');
 
 const router = express.Router();
 const Student = require('./../models/student');
@@ -16,8 +15,6 @@ router.get('/xml-data', (req, res, next) => {
     if (err) {
       return res.render('error', { message: 'No data found to generate XML!' });
     }
-
-    console.log(students);
 
     const xmlString = xml.parse('students', students.map(({ name, lastName, cardId, career, financialRequest }) => ({
       student: {
