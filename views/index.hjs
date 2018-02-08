@@ -11,5 +11,11 @@
     <form action="/xml-data" method="get">
       <button type="submit">Download XML</button>
     </form>
+
+    <p>Or you can send the XML data by clicking below:</p>
+    
+    <form action="/xml-data" method="post">
+      <button type="submit">Send XML</button>
+    </form>
   </body>
 </html>
